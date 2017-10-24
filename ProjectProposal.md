@@ -32,5 +32,7 @@ translate different type of data to daily data. (For example, the unemployment r
 
 ## Target:
 The targets of our data analysis include:
-1.Find out the relationship between the features above and the NASDAQ 100 index, and the correlation between the features
+
+1.Find out the relationship between the features above and the NASDAQ 100 index, and the correlation between the features.
+
 2.Build models for prediction of NASDAQ 100 index, compare and select the best model for the test data. The models we will use for prediction include Logistic Regression, Naive Bayes, Gaussian Discriminant Analysis (GDA) and Support Vector Machine(SVM). For each model, we will select the effective factors to make predictions. 
