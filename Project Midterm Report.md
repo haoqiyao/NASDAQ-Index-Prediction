@@ -50,11 +50,11 @@ We performed principal component analysis with respect to the features, and here
 
 We calculate the daily log return of NASDAQ Index, and define positive return as 1 and negative return as -1 respectively. As a preliminary analysis, we built one nonlinear model (classification tree) and one linear model (linear logistics regression)to predict the next day's NASDAQ index change direction using features of the previous day.
 
-We divided the dataset into training set (3000 samples) and testing set (617 samples), and here is the classification derived from training set.
+We divided the dataset into training set (3000 samples) and testing set (617 samples)
 
 ### Nonlinear model - Classification Tree
 
-We attempt to use classification tree to explore whether the features of previous day could predict the next day's NASDAQ index change direction.
+We attempt to use classification tree to explore whether the features of previous day could predict the next day's NASDAQ index change direction. Here is the classification derived from training set.
 
 
 ![plot](plot/ctree.jpeg)
