@@ -35,3 +35,7 @@ There are 20 features and 3618 examples for each feature.
 
 Here is the heatmap of our features' correlation:
 ![plot](plot/corr.jpg)
+We can see that stock indices are highly correlated, and not much of this happen between stock indices and commodity. Suprisingly, Google trend indices show significant high correlation with risk-free rates and exchange rates.
+
+Then we want to show plots of features. In order to make the trend more clear, we seperate them into different plots based on their scales:
+![plot](plot/index1.jpg)![plot](plot/index2.jpg)![plot](plot/index3.jpg)![plot](plot/index4.jpg)![plot](plot/index5.jpg)
