@@ -43,4 +43,5 @@ Then we want to show plots of features. In order to make the trend more clear, w
 ![plot](plot/index1.jpg)![plot](plot/index2.jpg)![plot](plot/index3.jpg)![plot](plot/index4.jpg)![plot](plot/index5.jpg)
 2
 We performed principal component analysis with respect to the features, and here is the result:
+
 ![plot](plot/pca.png)
