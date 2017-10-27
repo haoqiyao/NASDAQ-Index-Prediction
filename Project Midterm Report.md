@@ -41,7 +41,16 @@ We can see that stock indices are highly correlated, and not much of this happen
 Then we want to show plots of features. In order to make the trend more clear, we seperate them into different plots based on their scales:
 
 ![plot](plot/index1.jpg)![plot](plot/index2.jpg)![plot](plot/index3.jpg)![plot](plot/index4.jpg)![plot](plot/index5.jpg)
-2
+
 We performed principal component analysis with respect to the features, and here is the result:
 
 ![plot](plot/pca.png)
+
+We calculate the daily log return of NASDAQ Index, and define positive return as 1 and negative return as -1 respectively. We attempt to use classification tree to explore whether the features of previous day could predict the next day's NASDAQ index change direction.
+
+We divided the dataset into training set (3000 samples) and testing set (617 samples), and here is the classification derived from training set.
+
+![plot](plot/ctree.jpeg)
+
+The in the sample error on training set is 0.43, and the out of sample error on test set is 0.475.
+
