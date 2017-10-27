@@ -31,4 +31,7 @@ Messy Data Problem:
 
 There are 20 features and 3618 examples for each feature.
 
-##
+## Features Analysis
+
+Here is the heatmap of our features' correlation:
+![plot](plot/corr.jpg)
