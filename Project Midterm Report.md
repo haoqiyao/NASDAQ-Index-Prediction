@@ -42,6 +42,12 @@ Then we want to show plots of features. In order to make the trend more clear, w
 
 ![plot](plot/index1.jpg)![plot](plot/index2.jpg)![plot](plot/index3.jpg)![plot](plot/index4.jpg)![plot](plot/index5.jpg)
 
+Then we calculate log return of NASDAQ 100 to do classification. The histogram of return is shown below:
+![plot](plot/Logreturn.jpg)
+We discard some of the outliers in log returns (10 of them). The amended histogram looks like this:
+![plot](plot/Logreturn no extreme.jpg)
+We can see NASDAQ 100 log return is nearly normally distributed.
+
 ## Preliminary analysis
 
 We performed principal component analysis with respect to the features, and here is the result:
