@@ -48,7 +48,7 @@ Then we calculate log return of NASDAQ 100 to do classification. The histogram o
 
 We discard some of the outliers in log returns (10 of them). The amended histogram looks like this:
 
-![plot](plot/Logreturn no extreme.jpg)
+![plot](plot/Logreturn_no_extreme.jpg)
 
 We can see NASDAQ 100 log return is nearly normally distributed.
 
