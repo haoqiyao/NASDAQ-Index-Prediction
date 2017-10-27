@@ -39,3 +39,4 @@ We can see that stock indices are highly correlated, and not much of this happen
 
 Then we want to show plots of features. In order to make the trend more clear, we seperate them into different plots based on their scales:
 ![plot](plot/index1.jpg)![plot](plot/index2.jpg)![plot](plot/index3.jpg)![plot](plot/index4.jpg)![plot](plot/index5.jpg)
+1
