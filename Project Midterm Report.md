@@ -66,7 +66,7 @@ We attempt to use classification tree to explore whether the features of previou
 
 ![plot](plot/ctree2.jpeg)
 
-The in the sample error on training set is 0.43, and the out of sample error on test set is 0.475. The error is a bit high so our model is under fitting.
+The in the sample error on training set is 42.83%, and the out of sample error on test set is 42.79%. The error is a bit high so our model is under fitting.
 
 ### Linear model - Linear Logistics Regression
 
