@@ -70,9 +70,11 @@ The in the sample error on training set is 42.83%, and the out of sample error o
 
 ### Linear model - Linear Logistics Regression
 
-We use all 20 features to train the linear logistics regression model without regularization in the training set and predict the index direction in the testing set using the testing sample. 
+In the linear logistics model, the data with larger scale may dominate the data with smaller scale when making prediction, so we first use standardize the training dataset and then use the standardization scaler of the training set to scale the testing set.
 
-The result of the model shows that the prediction accuracy is 55.27%.
+We use all 20 scaled features to train the linear logistics regression model without regularization in the training set and predict the index direction in the testing set using the testing sample. 
+
+The result of the model shows that the prediction accuracy is 54.29%.
 
 ## Future Development
 
