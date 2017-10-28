@@ -6,11 +6,11 @@ First of all, what NASDAQ 100 is? It is a stock market index that is made up of 
 
 ## Data set description
 
-Summary:
+### Summary
 
 Our data set include daily data of Long Term Treasury Rate,	10 Year Treasury Bill Rate, USD/YEN, USD/RMB, USD/EUR, Oil Price, Gold Price, FTSE 100 Index, Nikkei 225 Index, S&P 500 Index, SSEC Index, VIX Index, Dow Jone Industrial Average, Russell 2000 Index, Hang Seng Index, Unemployment Google Trend Index, Mortgage Google Trend Index, Investing Google Trend Index, Bankrupcy Google Trend Index, NASDAQ Volume, and NASDAQ Index from 3/19/03 to 10/17/17.
 
-Reasons For Choosing These Data:
+### Reasons For Choosing These Data
 
 1. Risk-free rate that represent the trend of macroeconomy: Long Term Treasury Rate,	10 Year Treasury Bill Rate
 2. Exchange rates that represent international trade and its stability: USD/YEN, USD/RMB, USD/EUR
@@ -20,7 +20,7 @@ Reasons For Choosing These Data:
 
 You can see that our data look like a structured portfolio, and we think that features in this portfolio might impact NASDAQ Index in different ways. 
 
-Messy Data Problem: 
+### Messy Data Problem
 1. There are some null values in data column Nikkei, Hang Seng, and SSEC. We decided to use the average of non-null values which days are before and after the null values' days, to fill these missing values.
 2. Google Trend Data are continuous so they will include non-trading days, we also manage to delete those non-trading days' values to maintain consistency.
 
