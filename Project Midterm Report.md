@@ -80,8 +80,8 @@ The result of the model shows that the prediction accuracy is 54.29%.
 
 We can see that the prediction accuracy is mediocre. However, it is still pretty good since we are betting against the market, which many experts say its movement is close to brownian motion. In the next stage of developing our model, we want to do the following adjustment:
 1. Shorten the period since data from remote period might cancel out recent data's significance
-2. Use PCA to lower the dimensions
+2. Use PCA to lower the dimensions, then apply sparse PCA and compare the errors
 3. Find more ways to develop our tree model to avoid underfitting and overfitting
 3. Try SVM and compare it with our current classification models
-4. Use cross validation to find the optimal model.
+4. Use cross validation to find the optimal model
 5. Maybe try to search for more features.
