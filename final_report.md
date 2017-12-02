@@ -94,8 +94,29 @@ We can use LASSO to predict the next day's log return, and change the alpha of L
 
 ![plot](plot/LASSO_Feature.png )
 
-Obviously, even if alpha is very small, the number of feature would decrease to 8. We can check what feature it selected:
+Obviously, even if alpha is very small, the number of feature would suddenly decrease to 8. We can check what feature it selected:
+
 When alpha =  0.01 , features has ['Gold', 'Nikkei', 'SSEC', 'DJIA', 'RUSS', 'HSI', 'NASDAQvolume', 'NASDAQ']
+
 When alpha =  0.5 , features has ['DJIA', 'HSI', 'NASDAQvolume']
+
 When alpha =  1 , features has ['NASDAQvolume']
+
+For the commodities, the Gold price is mouch more important than oil price to predict the return of the NASDAQ. And for index, DJIA and HSI are the two most important features.
+
+Also, in LASSO to predict the return of NASDAQ, the NASDAQ volume is the most important feature, even more important than NASDAQ, which means when we predict the changes of next day's NASDAQ index, it would be better for us to consider the volume of NASDAQ instead of other factors.
+
+Then, we can check the correlation of the selected features.
+
+![plot](plot/LASSO_Corr.png)
+
+It seems the correlation matrix in selected features are not high.
+
+SO, we can check the result of LASSO and ridge regression to see if the regularized linear regression is effective in time series:
+
+For the LASSO, the rate of prediction is 0.539708265802269.
+
+For ridge regression, the rate of prediction is 0.5089141004862237.
+
+Actually, both of results are not good. So we can't use linear regression in time series problems.
 
