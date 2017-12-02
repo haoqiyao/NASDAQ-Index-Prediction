@@ -88,4 +88,14 @@ We can see that the prediction accuracy is mediocre. However, it is still pretty
 5. Maybe try to search for more features.
 
 ## Feature Selecion and Linear Regression
-Because there are 22 feature in row data, so we can select features to reduce the number of feature and 
+Because there are 22 feature in row data, so we can select features to reduce the number of feature and find if the feature selection could help the prediction.
+
+We can use LASSO to predict the next day's log return, and change the alpha of LASSO to see the selection of feature.
+
+![plot](plot/LASSO_Feature.png )
+
+Obviously, even if alpha is very small, the number of feature would decrease to 8. We can check what feature it selected:
+When alpha =  0.01 , features has ['Gold', 'Nikkei', 'SSEC', 'DJIA', 'RUSS', 'HSI', 'NASDAQvolume', 'NASDAQ']
+When alpha =  0.5 , features has ['DJIA', 'HSI', 'NASDAQvolume']
+When alpha =  1 , features has ['NASDAQvolume']
+
