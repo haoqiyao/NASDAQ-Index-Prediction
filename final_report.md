@@ -123,4 +123,6 @@ Actually, both of results are not good. So we can't use linear regression in tim
 
 ## K-means Clustering
 
-![plot](plot/K-means Clustering.png)
+![plot](plot/K_means_Clustering.png)
+
+Prediction error is 49.93%
