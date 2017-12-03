@@ -120,6 +120,8 @@ For ridge regression, the rate of prediction is 0.5089141004862237.
 
 Actually, both of results are not good. So we can't use linear regression in time series problems.
 
+## Artificial Neural Network
+We performed a two layer artificial neural network on random training set of size 3000 and test the model on the remaining data. The training error is 44.8% and the test error is 45.70502%.
 
 ## K-means Clustering
 
