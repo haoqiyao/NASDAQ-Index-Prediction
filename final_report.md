@@ -94,6 +94,8 @@ The 5-fold cross validation shows that when ![first equation](https://latex.code
 
 The prediction accuracy in the test set is 56.08%, which improves by 2% from that of the logistic regression without regularization.
 
+## Support Vector Machines 
+We further try the SVM model without kerel to make predictions. In fact, SVM model uses the hinge loss function with the quadratic regularizer. We train the model in the training set and make predictions in the test set. The prediciton accuracy in the test set is 55.11%. Compared to the logistic regression model, the SVM model has a similar prediction effect.
 
 ## Feature Selecion and Linear Regression
 Because there are 22 feature in row data, so we can select features to reduce the number of feature and find if the feature selection could help the prediction.
