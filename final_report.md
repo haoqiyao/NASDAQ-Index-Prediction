@@ -120,3 +120,6 @@ For ridge regression, the rate of prediction is 0.5089141004862237.
 
 Actually, both of results are not good. So we can't use linear regression in time series problems.
 
+
+## K-means Clustering
+![plot](plot/K-means Clustering.png)
