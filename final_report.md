@@ -87,6 +87,14 @@ We can see that the prediction accuracy is mediocre. However, it is still pretty
 4. Use cross validation to find the optimal model
 5. Maybe try to search for more features.
 
+## Logistic Regression with L2 regularizer
+From the correlation heapmap of features, we find that correlations between some features are very large, it may affect the coeffiencients and make them unreasonably large. So, we want to add the l2 (quadratic) regularizer in the loss function and use the 5-fold cross validation in the training set to find the best regularization parameter in our model.
+
+The 5-fold cross validation shows that when ![first equation](https://latex.codecogs.com/gif.latex?%24%5Clambda%20%3D%20100%24) , the validation error is the smallest. Thus, we will use that regularization parameter to train the l2 regularized logistic regression, and test the model in the test set. 
+
+The prediction accuracy in the test set is 56.08%, which improves by 2% from that of the logistic regression without regularization.
+
+
 ## Feature Selecion and Linear Regression
 Because there are 22 feature in row data, so we can select features to reduce the number of feature and find if the feature selection could help the prediction.
 
