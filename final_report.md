@@ -163,4 +163,4 @@ Prediction error is 49.93%
 
 After using different classification algorithms to predict the movement of NASDAQ, we find that almost all the classifiers have poor prediction accuracy on the test set. Different feature engineering techniques cannot improve their performance. Therefore, we infer that the noise in the NASDAQ return is so large that these classification models are not able to find an obvious decision boundary between the up movement and down movement. We plot pictures of some feature pairs to visualize our inference.
 
-![plot](plot/gold_volume.png) ![plot](plot/gold_Nikkei) ![plot](plot/Nikkei_DJIA.png) ![plot](plot/HSI_SSEC.png)
+![plot](plot/classification_visualization.png)
