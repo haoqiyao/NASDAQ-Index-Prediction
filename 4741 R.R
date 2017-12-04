@@ -128,3 +128,13 @@ print(km)
 table(km$cluster,data1$Change)
 plot(feature,col=km$cluster)
 
+#time series
+LogRval=LogR$V2
+LogRval=tail(LogRval,-1)
+LogRvalTrain=LogRval[1:3607]
+LogRvalTrue=LogRval[3608:3617]
+fit=auto.arima(LogRvalTrain)
+LogRvalPredict=forecast(fit,10)
+plot(LogRvalPredict$mean)
+par(new=TRUE)
+plot(LogRvalTrue,type="o")
