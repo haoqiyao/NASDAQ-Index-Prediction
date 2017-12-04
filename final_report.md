@@ -130,6 +130,18 @@ For ridge regression, the rate of prediction is 0.5089141004862237.
 
 Actually, both of results are not good. So we can't use linear regression in time series problems.
 
+## Logistic Regression and SVM Using Selected Features
+
+We use the selected features from the Lasso features selection above to train our logistic regresssion and SVM model with quadratic regularization, use cross validation to find the regularization parameters, and predict whether NASDAQ goes up or down in the test set. The following table shows the prediction accuracy of different number of selected features.
+
+| Prediction  Accuracy| Logistic Regression |   SVM  |
+| ------------------- | ------------------- | ------ |
+| 8 selected features |      54.94%         | 55.11% |
+| 3 selected features |      55.11%         | 55.11% |
+| 1 selected features |      55.11%         | 55.11% |
+
+The results show that feature selection does not improve the prediction accuracy of different number of selected features. And even worse, the SVM and logistic regression perform poorly with less features because they only predict "up" in the test set, so they all have the same accuracy, 55.11%. 
+
 ## Artificial Neural Network
 We performed a two layer artificial neural network on random training set of size 3000 and test the model on the remaining data. The training error is 44.8% and the test error is 45.70502%.
 
