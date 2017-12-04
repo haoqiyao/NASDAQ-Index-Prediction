@@ -54,7 +54,7 @@ Then we want to define our model as a binomial tree: while the log return is non
 
 Since the lognormal return of NASDAQ is a time series data, first we try to fit the data with a ARIMA model. The result is shown below:
 
-![plot](plot/tsmodel.jpg=250x250)
+![plot](plot/tsmodel.jpg| width=100)
 
 We can see the model fits an AR(5) model and the AIC value is really small. We then try to predict the latter 10 values and compare with the true values just for preliminary analysis. 
 
