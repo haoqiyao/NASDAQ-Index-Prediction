@@ -50,6 +50,18 @@ We can see NASDAQ 100 log return is nearly normally distributed.
 
 Then we want to define our model as a binomial tree: while the log return is nonnegative, we mark them as up movement and define it as 1; otherwise, we define it as -1. We want to classfy whether today's NASDAQ Index is going up or down based on previous trading day's data.
 
+## Preliminary Time Series analysis
+
+Since the lognormal return of NASDAQ is a time series data, first we try to fit the data with a ARIMA model. The result is shown below:
+
+![plot](plot/tsmodel.jpg)
+
+We can see the model fits an AR(5) model and the AIC value is really small. We then try to predict the latter 10 values and compare with the true values just for preliminary analysis. 
+
+![plot](plot/tsprediction.jpg)
+
+The prediction is not well because the data does not show seasonal attribute and the data itself looks like a brownian motion. So time series prediction is not good in our case since the prediction just flattened out, which is even worse if we want to classify its trend instead of values.
+
 ## Preliminary analysis
 
 We performed principal component analysis with respect to the features, and here is the result:
@@ -60,7 +72,7 @@ As a preliminary analysis, we built one nonlinear model (classification tree) an
 
 We divided the dataset into training set (3000 samples) and testing set (617 samples)
 
-### Nonlinear model - Classification Tree
+## Nonlinear model - Classification Tree
 
 We attempt to use classification tree to explore whether the features of previous day could predict the next day's NASDAQ index change direction. Here is the classification derived from training set.
 
@@ -69,23 +81,13 @@ We attempt to use classification tree to explore whether the features of previou
 
 The in the sample error on training set is 42.83%, and the out of sample error on test set is 42.79%. The error is a bit high so our model is under fitting.
 
-### Linear model - Linear Logistics Regression
+## Linear model - Linear Logistics Regression
 
 In the linear logistics model, the data with larger scale may dominate the data with smaller scale when making prediction, so we first use standardize the training dataset and then use the standardization scaler of the training set to scale the testing set.
 
 We use all 20 scaled features to train the linear logistics regression model without regularization in the training set and predict the index direction in the testing set using the testing sample. 
 
 The result of the model shows that the prediction accuracy is 54.29%.
-
-## Future Development
-
-We can see that the prediction accuracy is mediocre. However, it is still pretty good since we are betting against the market, which many experts say its movement is close to brownian motion. In the next stage of developing our model, we want to do the following adjustment:
-1. Shorten the period since data from remote period might cancel out recent data's significance
-2. Use PCA to lower the dimensions, then apply sparse PCA and compare the errors
-3. Find more ways to develop our tree model to avoid underfitting and overfitting
-3. Try SVM and compare it with our current classification models
-4. Use cross validation to find the optimal model
-5. Maybe try to search for more features.
 
 ## Logistic Regression with L2 regularizer
 From the correlation heapmap of features, we find that correlations between some features are very large, it may affect the coeffiencients and make them unreasonably large. So, we want to add the l2 (quadratic) regularizer in the loss function and use the 5-fold cross validation in the training set to find the best regularization parameter in our model.
