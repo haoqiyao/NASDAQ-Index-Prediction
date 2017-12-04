@@ -58,7 +58,7 @@ Since the lognormal return of NASDAQ is a time series data, first we try to fit 
 
 We can see the model fits an AR(5) model and the AIC value is really small. We then try to predict the latter 10 values and compare with the true values just for preliminary analysis. 
 
-![plot](plot/tspredict.jpg=250x250)
+![plot](plot/tspre1.jpg)
 
 As line is the prediction, "o" line is the true value, the prediction is not well because the data does not show seasonal attribute and the data itself looks like a brownian motion. So time series prediction is not good in our case since the prediction just flattened out, which is even worse if we want to classify its trend instead of values.
 
