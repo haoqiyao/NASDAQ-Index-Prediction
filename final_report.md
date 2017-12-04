@@ -142,7 +142,7 @@ We use the selected features from the Lasso features selection above to train ou
 | 3 selected features |      55.11%         | 55.11% |
 | 1 selected features |      55.11%         | 55.11% |
 
-The results show that feature selection does not improve the prediction accuracy of different number of selected features. And even worse, the SVM and logistic regression perform poorly with less features because they only predict "up" in the test set, so they all have the same accuracy, 55.11%. 
+The results show that feature selection does not improve much on the prediction accuracy of different number of selected features. For Logistic Regression and SVM, if we use too little features, the prediction accuracy will remain the same.
 
 ## Logistic Regression and SVM Using Principal Components
 
@@ -150,7 +150,7 @@ In our preliminary analysis, we performed PCA on the features in the training se
 
 As shown in the PCA, we select the first seven principal components, which explains the 91.63% variance of all the features, as our new features, and run the logistic regression and SVM with quadratic regularization. 
 
-The result shows that the prediction accuracy of logistic regression and SVM are 55.60% and 55.11% respectively. Again, we cannot improve the prediction accuracy with principal components. Also, by analyzing the predicted movement of NASDAQ, we find that these models predict "up" movement at most test points and seldom predict "down" movement. 
+The result shows that the prediction accuracy of logistic regression and SVM are 55.60% and 55.11% respectively. Again, we cannot improve the prediction accuracy with principal components.
 
 ## Artificial Neural Network
 We performed a two layer artificial neural network on random training set of size 3000 and test the model on the remaining data. The training error is 44.8% and the test error is 45.70502%.
