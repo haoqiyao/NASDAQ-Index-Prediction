@@ -168,3 +168,6 @@ After using different classification algorithms to predict the movement of NASDA
 ![plot](plot/classification_visualization.png)
 
 From these plots of feature pairs, we can observe that there are no obvious decision boundaries for "up" and "down" movement of NASDAQ in each feature pair. 
+
+After nearly one month's work, our team handed Frank and Mike our product. They stared at it and of course not pleased by the result. Frank yelled, "Why?! I thought we are going to be living in Malibu and drinking lemonade forever without working!"
+Suddenly, their boss showed up, "You two lazy workers! I already knew this result because the market is expected to weak form efficient. If you are going to make a 90% prediction based on historical indices, you can be my boss now! Now get back to work before I fire you!"
