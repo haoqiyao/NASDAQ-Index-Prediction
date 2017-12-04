@@ -173,3 +173,12 @@ After nearly one month's work, our team handed Frank and Mike our product. They 
 Suddenly, their boss showed up, "You two lazy workers! I already knew this result because the market is expected to weak form efficient. If you are going to make a 90% prediction based on historical indices, you can be my boss now! Now get back to work before I fire you!"
 
 Nonetheless, it is a good start. With modifications of features and more economic research, beating the market may not be impossible.
+
+# Summary
+In NASDAQ index prediction, we used data including daily data of Long Term Treasury Rate, 10 Year Treasury Bill Rate, USD/YEN, USD/RMB, USD/EUR, Oil Price, Gold Price, FTSE 100 Index, Nikkei 225 Index, S&P 500 Index, SSEC Index, VIX Index, Dow Jone Industrial Average, Russell 2000 Index, Hang Seng Index, Unemployment Google Trend Index, Mortgage Google Trend Index, Investing Google Trend Index, Bankrupcy Google Trend Index, NASDAQ Volume, and NASDAQ Index from 3/19/03 to 10/17/17, and fill the null with average of non-null values to fix messy data. We want to use linear regression, classification and time series analysis to find the relaltionship between features and NASDAQ index.
+
+In preliminary analysis, we firstly analyze the relationship between features by using correlation matrix and plot. Then we applied ARIMA, but it is not good in our case since the prediction just flattened out, which is even worse if we want to classify its trend instead of values. And we also applied classification tree and linear regression to predict the next day's change of NASDAQ index. While we still can't get a good result.
+
+After the midterm, we came up with the idea that the model could have too many features, and we can select the features in order to improve the performance. Then we applied LASSO and find the changes of feature. However, the NASDAQ index doesn't linearly depend on the features, for any type of linear regression couldn't get a good result. And when we use the selected features or principal components with SVM and logistic regression, the result can't be improved. So we can reject that the assumption that NASDAQ index has linear relationship with other index or commodiity price.
+
+At last, we analyzed the reason of poor performance.
