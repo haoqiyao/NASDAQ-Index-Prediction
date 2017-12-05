@@ -156,10 +156,11 @@ The result shows that the prediction accuracy of logistic regression and SVM are
 We performed a two layer artificial neural network on random training set of size 3000 and test the model on the remaining data. The training error is 44.8% and the test error is 45.70502%.
 
 ## K-means Clustering
+We performed K-means Clustering with K=2 on the whole data set and get the following result.
 
 ![plot](plot/K_means_Clustering.png)
 
-Prediction error is 49.93%
+The Prediction error is 49.93%.
 
 ## Analysis of the Poor Performance of Classifiers
 
