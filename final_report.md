@@ -72,7 +72,7 @@ As a preliminary analysis, we built one nonlinear model (classification tree) an
 
 We divided the dataset into training set (3000 samples) and testing set (617 samples)
 
-## Nonlinear model - Classification Tree
+### Nonlinear model - Classification Tree
 
 We attempt to use classification tree to explore whether the features of previous day could predict the next day's NASDAQ index change direction. Here is the classification derived from training set.
 
@@ -81,7 +81,7 @@ We attempt to use classification tree to explore whether the features of previou
 
 The in the sample error on training set is 42.83%, and the out of sample error on test set is 42.79%. The error is a bit high so our model is under fitting.
 
-## Linear model - Linear Logistics Regression
+### Linear model - Linear Logistics Regression
 
 In the linear logistics model, the data with larger scale may dominate the data with smaller scale when making prediction, so we first use standardize the training dataset and then use the standardization scaler of the training set to scale the testing set.
 
