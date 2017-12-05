@@ -146,14 +146,14 @@ The results show that feature selection does not improve much on the prediction 
 
 ## Logistic Regression and SVM Using Principal Components
 
-In our preliminary analysis, we performed PCA on the features in the training set. In this part, we want to use PCA to reduce the dimension of our features and then use the principal components as our new features in the logistic and SVM model to predict movements of NASDAQ. In this way, we want to reduce the noice in the feature data as much as possible. 
+In our preliminary analysis, we performed PCA on the features in the training set. In this part, we want to use PCA to reduce the dimension of our features and then use the principal components as our new features in the logistic and SVM model to predict movements of NASDAQ. In this way, we want to reduce the noise in the feature data as much as possible. 
 
 As shown in the PCA, we select the first seven principal components, which explains the 91.63% variance of all the features, as our new features, and run the logistic regression and SVM with quadratic regularization. 
 
 The result shows that the prediction accuracy of logistic regression and SVM are 55.60% and 55.11% respectively. Again, we cannot improve the prediction accuracy with principal components.
 
 ## Artificial Neural Network
-We performed a two layer artificial neural network on random training set of size 3000 and test the model on the remaining data. The training error is 44.8% and the test error is 45.70502%.
+We performed a two layer artificial neural network on a random training set of size 3000 and test the model on the remaining data. The training error is 44.8% and the test error is 45.70502%.
 
 ## K-means Clustering
 We performed K-means Clustering with K=2 on the whole data set and get the following result.
@@ -176,10 +176,10 @@ Suddenly, their boss showed up, "You two lazy workers! I already knew this resul
 Nonetheless, it is a good start. With modifications of features and more economic research, beating the market may not be impossible.
 
 # Summary
-In NASDAQ index prediction, we used data including daily data of Long Term Treasury Rate, 10 Year Treasury Bill Rate, USD/YEN, USD/RMB, USD/EUR, Oil Price, Gold Price, FTSE 100 Index, Nikkei 225 Index, S&P 500 Index, SSEC Index, VIX Index, Dow Jone Industrial Average, Russell 2000 Index, Hang Seng Index, Unemployment Google Trend Index, Mortgage Google Trend Index, Investing Google Trend Index, Bankrupcy Google Trend Index, NASDAQ Volume, and NASDAQ Index from 3/19/03 to 10/17/17, and fill the null with average of non-null values to fix messy data. We want to use linear regression, classification and time series analysis to find the relaltionship between features and NASDAQ index.
+In NASDAQ index prediction, we used data including daily data of Long Term Treasury Rate, 10 Year Treasury Bill Rate, USD/YEN, USD/RMB, USD/EUR, Oil Price, Gold Price, FTSE 100 Index, Nikkei 225 Index, S&P 500 Index, SSEC Index, VIX Index, Dow Jone Industrial Average, Russell 2000 Index, Hang Seng Index, Unemployment Google Trend Index, Mortgage Google Trend Index, Investing Google Trend Index, Bankrupcy Google Trend Index, NASDAQ Volume, and NASDAQ Index from 3/19/03 to 10/17/17, and fill the null with the average of non-null values to fix messy data. We want to use linear regression, classification and time series analysis to find the relationship between features and NASDAQ index.
 
-In preliminary analysis, we firstly analyze the relationship between features by using correlation matrix and plot. Then we applied ARIMA, but it is not good in our case since the prediction just flattened out, which is even worse if we want to classify its trend instead of values. And we also applied classification tree and linear regression to predict the next day's change of NASDAQ index. While we still can't get a good result.
+In the preliminary analysis, we firstly analyze the relationship between features by using correlation matrix and plot. Then we applied ARIMA, but it is not good in our case since the prediction just flattened out, which is even worse if we want to classify its trend instead of values. And we also applied classification tree and linear regression to predict the next day's change of NASDAQ index. While we still can't get a good result.
 
-After the midterm, we came up with the idea that the model could have too many features, and we can select the features in order to improve the performance. Then we applied LASSO and find the changes of feature. However, the NASDAQ index doesn't linearly depend on the features, for any type of linear regression couldn't get a good result. And when we use the selected features or principal components with SVM and logistic regression, the result can't be improved. So we can reject that the assumption that NASDAQ index has linear relationship with other index or commodity price.
+After the midterm, we came up with the idea that the model could have too many features, and we can select the features in order to improve the performance. Then we applied LASSO and find the changes of feature. However, the NASDAQ index doesn't linearly depend on the features, for any type of linear regression couldn't get a good result. And when we use the selected features or principal components with SVM and logistic regression, the result can't be improved. So we can reject that the assumption that NASDAQ index has linear relationships with other index or commodity price.
 
-At last, we analyzed the reason of poor performance.
+At last, we analyzed the reason for poor performance.
